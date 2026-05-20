@@ -1,0 +1,287 @@
+
+USER@DESKTOP-0IA8CCH MINGW64 ~
+$ pwd
+/c/Users/USER
+
+USER@DESKTOP-0IA8CCH MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=mrsajib39@gmail.com
+user.name=sajib1996
+init.defaultbranch=main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~
+$ cd desktop
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop
+$ mkdic git_test
+bash: mkdic: command not found
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop
+$ mkdir GitTest
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop
+$ cd GitTest
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest
+$ touch demo1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest
+$ git init
+Initialized empty Git repository in C:/Users/USER/Desktop/GitTest/.git/
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git add .
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo1.txt
+
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git commit -m "file commited"
+[main (root-commit) 73ecb94] file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 demo1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ git clone "https://github.com/sajib1996/GitHubTest.git"
+Cloning into 'GitHubTest'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (7/7), 259.73 KiB | 1.64 MiB/s, done.
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest (main)
+$ cd GithubTest
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ touch text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        text1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ add .txt
+bash: add: command not found
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git add .txt
+fatal: pathspec '.txt' did not match any files
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git add *.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   text1.txt
+
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git commit -m"text file committed"
+[main 6aca760] text file committed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git push origin GitHubTest
+error: src refspec GitHubTest does not match any
+error: failed to push some refs to 'https://github.com/sajib1996/GitHubTest.git'
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sajib1996/GitHubTest.git
+   fb6db93..6aca760  main -> main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git branch
+* main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git branch code
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git branch
+  code
+* main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git checkout code
+Switched to branch 'code'
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git branch
+* code
+  main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ touch python1.py
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git add *.py
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git status
+On branch code
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   python1.py
+
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git commit -m".py file committed"
+[code e7e3672] .py file committed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 python1.py
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git status
+On branch code
+nothing to commit, working tree clean
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (code)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ls
+'MCA  leads.pdf'   README.md   pic1.jpg   text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git merge main -m"Merging code with main"
+Already up to date.
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ls
+'MCA  leads.pdf'   README.md   pic1.jpg   text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git merge code -m "merging code with main"
+Updating 6aca760..e7e3672
+Fast-forward (no commit created; -m option ignored)
+ python1.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 python1.py
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ls
+'MCA  leads.pdf'   README.md   pic1.jpg   python1.py   text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 259 bytes | 259.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sajib1996/GitHubTest.git
+   6aca760..e7e3672  main -> main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 6.83 KiB | 874.00 KiB/s, done.
+From https://github.com/sajib1996/GitHubTest
+   e7e3672..3e4e8fd  main       -> origin/main
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ls
+'MCA  leads.pdf'   README.md   pic1.jpg   python1.py   text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ git pull origin main
+From https://github.com/sajib1996/GitHubTest
+ * branch            main       -> FETCH_HEAD
+Updating e7e3672..3e4e8fd
+Fast-forward
+ Capture.PNG | Bin 0 -> 6833 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Capture.PNG
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ls
+ Capture.PNG  'MCA  leads.pdf'   README.md   pic1.jpg   python1.py   text1.txt
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$ ^C
+
+USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
+$
