@@ -285,3 +285,7 @@ $ ^C
 
 USER@DESKTOP-0IA8CCH MINGW64 ~/desktop/GitTest/GithubTest (main)
 $
+
+
+
+class 20-5-26
